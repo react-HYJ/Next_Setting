@@ -1,8 +1,26 @@
 .header {
-    width: 100%;
-    height: 60px;
-    background-color: #f1f1f1;
-    position: fixed;
-    left: 0;
-    top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f1f1f1;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.container {
+  padding: 80px 16px;
+}
+
+.e_gap {
+  border: 1px solid;
+  padding: 20px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .e_title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 0 10px;
+    margin: 0 0 10px;
+    border-bottom: 2px solid #c9c9c9;
+  }
 }
