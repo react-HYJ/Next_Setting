@@ -1,8 +1,9 @@
-.count_wrap {
+.count_input_wrap {
   display: flex;
   align-items: center;
   gap: 10px;
-  input[type="radio"] {
+  input[type="radio"],
+  input[type="checkbox"] {
     display: none;
     & + label {
       display: block;
