@@ -1,0 +1,33 @@
+.img_input_wrap {
+  display: flex;
+  gap: 20px;
+  input[type="file"] {
+    display: none;
+    & + label.uploader_img {
+      display: block;
+      width: 100px;
+      height: 100px;
+      border: 1px solid;
+      cursor: pointer;
+    }
+  }
+  .thumbnail_list {
+    width: calc(100% - 110px);
+    display: flex;
+    gap: 20px;
+    li {
+      width: 100px;
+      height: 100px;
+      border: 1px solid;
+      position: relative;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      .thumbnail_remove {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+      }
+    }
+  }
+}

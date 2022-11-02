@@ -3,8 +3,11 @@ import { useState } from "react";
 const FileInput = () => {
   const [upload, setUpload] = useState("");
   const getValue = (e: any) => {
-    var txtArr = e.currentTarget.value.split("\\");
-    setUpload(txtArr[txtArr.length - 1]);
+    // case(1)
+    //var txtArr = e.currentTarget.value.split("\\");
+    //setUpload(txtArr[txtArr.length - 1]);
+    var txt = e.target.files[0].name;
+    setUpload(txt);
   };
   return (
     <>

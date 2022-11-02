@@ -1,0 +1,30 @@
+.search_typing_wrap {
+  width: 350px;
+  position: relative;
+  .type_area {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+  }
+  .data_area {
+    display: none;
+    width: 100%;
+    border: 1px solid;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    background-color: #fff;
+    &.on {
+      display: block;
+    }
+    li {
+      padding: 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: yellow;
+      }
+    }
+  }
+}

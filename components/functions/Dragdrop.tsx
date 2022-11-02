@@ -12,10 +12,12 @@ interface IFileTypes {
 }
 
 const Dragdrop = () => {
+  // 드래그 중일때와 아닐때의 스타일을 구분하기 위한 state 변수
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [files, setFiles] = useState<IFileTypes[]>([]);
-
+  // 드래그 이벤트를 감지하는 ref 참조변수 (label 태그에 들어갈 예정)
   const dragRef = useRef<HTMLLabelElement | null>(null);
+  // 각 선택했던 파일들의 고유값 id
   const fileId = useRef<number>(0);
 
   const onChangeFiles = useCallback(

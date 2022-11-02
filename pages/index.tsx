@@ -4,7 +4,9 @@ import Header from "../components/common/Header";
 import AddressInput from "../components/functions/AddressInput";
 import CountInput from "../components/functions/CountInput";
 import Dragdrop from "../components/functions/Dragdrop";
+import FileImgInput from "../components/functions/FileImgInput";
 import FileInput from "../components/functions/FileInput";
+import SearchTyping from "../components/functions/SearchTyping";
 
 export default function Home() {
   return (
@@ -24,8 +26,16 @@ export default function Home() {
           <FileInput />
         </div>
         <div className="e_gap">
+          <h1 className="e_title">파일첨부 (이미지 노출)</h1>
+          <FileImgInput />
+        </div>
+        <div className="e_gap">
           <h1 className="e_title">파일첨부 (drag & drop)</h1>
           <Dragdrop />
+        </div>
+        <div className="e_gap">
+          <h1 className="e_title">검색입력</h1>
+          <SearchTyping />
         </div>
       </section>
     </>
