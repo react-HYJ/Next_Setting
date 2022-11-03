@@ -3,6 +3,7 @@ import React from "react";
 import Header from "../components/common/Header";
 import AddressInput from "../components/functions/AddressInput";
 import CountInput from "../components/functions/CountInput";
+import DepthAppend from "../components/functions/DepthAppend";
 import Dragdrop from "../components/functions/Dragdrop";
 import FileImgInput from "../components/functions/FileImgInput";
 import FileInput from "../components/functions/FileInput";
@@ -13,6 +14,10 @@ export default function Home() {
     <>
       <Header />
       <section className="container">
+        <div className="e_gap">
+          <h1 className="e_title">요소 append / remove</h1>
+          <DepthAppend />
+        </div>
         <div className="e_gap">
           <h1 className="e_title">주소 입력</h1>
           <AddressInput />
@@ -33,10 +38,22 @@ export default function Home() {
           <h1 className="e_title">파일첨부 (drag & drop)</h1>
           <Dragdrop />
         </div>
-        <div className="e_gap">
+        <div className="e_gap" style={{ height: "300px" }}>
           <h1 className="e_title">검색입력</h1>
-          <SearchTyping />
+          <SearchTyping
+            keyword={[
+              "Dac",
+              "Dachshudn",
+              "Dalmatian",
+              "Dandie Dinmont Terrier",
+              "Danish Broholmer",
+            ]}
+          />
         </div>
+        {/* <div className="e_gap">
+          <h1 className="e_title">요소 append / remove</h1>
+          <DepthAppend />
+        </div> */}
       </section>
     </>
   );

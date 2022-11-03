@@ -6,6 +6,7 @@ import "../styles/components/functions/fileInput.scss";
 import "../styles/components/functions/fileImgInput.scss";
 import "../styles/components/functions/dragdrop.scss";
 import "../styles/components/functions/searchTyping.scss";
+import "../styles/components/functions/depthAppend.scss";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

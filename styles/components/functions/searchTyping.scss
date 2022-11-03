@@ -6,8 +6,15 @@
     width: 100%;
     padding: 6px 12px;
   }
+  .dim {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   .data_area {
-    display: none;
     width: 100%;
     border: 1px solid;
     position: absolute;
@@ -16,9 +23,8 @@
     right: 0;
     transform: translateY(100%);
     background-color: #fff;
-    &.on {
-      display: block;
-    }
+    z-index: 1;
+
     li {
       padding: 10px;
       cursor: pointer;

@@ -1,7 +1,13 @@
 import { useState } from "react";
 
-const SearchTyping = () => {
+interface Props {
+  keyword: Array<any>;
+}
+
+const SearchTyping = (props: Props) => {
   const [word, setWord] = useState("");
+  const [popup, setPopup] = useState(false);
+  const [wordList, setWordList] = useState(props.keyword);
 
   return (
     <>
@@ -10,17 +16,40 @@ const SearchTyping = () => {
           type="text"
           className="type_area"
           value={word}
-          onChange={(e) => {
-            setWord(e.target.value);
-            console.log(word);
-          }}
+          onChange={(e) => setWord(e.target.value)}
+          onFocus={() => setPopup(true)}
         />
-        <ul className="data_area">
-          <li>Dachshudn</li>
-          <li>Dalmatian</li>
-          <li>Dandie Dinmont Terrier</li>
-          <li>Danish Broholmer</li>
-        </ul>
+
+        {popup && (
+          <>
+            <div className="dim" onClick={() => setPopup(false)}></div>
+            <ul className="data_area">
+              {wordList
+                .filter((item) => {
+                  if (word == "") {
+                    return item;
+                  } else if (item.toLowerCase().includes(word.toLowerCase())) {
+                    return item;
+                  }
+                })
+                .map((item, index) => {
+                  return (
+                    <>
+                      <li
+                        key={index}
+                        onClick={() => {
+                          setWord(item);
+                          setPopup(false);
+                        }}
+                      >
+                        {item}
+                      </li>
+                    </>
+                  );
+                })}
+            </ul>
+          </>
+        )}
       </div>
     </>
   );
